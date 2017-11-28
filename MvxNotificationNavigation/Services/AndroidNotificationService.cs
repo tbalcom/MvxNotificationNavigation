@@ -78,7 +78,7 @@ namespace MvxNotificationNavigation.Services
             if (model == null) throw new ArgumentNullException(nameof(model));
 
             // @TODO: Fix this. 
-            // Android does show the Activity when the notification is clicked, but Prepare(), Initialize() etc. are not called.
+            // Android does show the Activity when the notification is clicked, but Prepare() is not called.
 
             var request = MvxViewModelRequest<NewViewModel>.GetDefaultRequest();
             request.ParameterValues = new Dictionary<string, string>
