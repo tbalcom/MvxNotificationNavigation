@@ -27,7 +27,13 @@ namespace MvxNotificationNavigation.Core.ViewModels
         {
             RandomNumber = parameter.RandomNumber;
             NotificationMessage = parameter.Message;
-            _mvxLog.Trace("NewViewModel.Prepare called");
+            _mvxLog.Trace("NewViewModel.Prepare(NotificationModel parameter) called");
+        }
+
+        public override void Prepare()
+        {
+            base.Prepare();
+            _mvxLog.Trace("NewViewModel.Prepare() called");
         }
 
         public override async Task Initialize()
